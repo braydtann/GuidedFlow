@@ -1,0 +1,255 @@
+/* Additional custom styles for the app */
+
+.loading-spinner {
+  @apply animate-spin rounded-full h-6 w-6 border-b-2 border-primary-600;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Node styles for React Flow */
+.custom-node {
+  @apply bg-white border-2 border-secondary-200 rounded-lg shadow-sm min-w-[200px] p-4;
+}
+
+.custom-node.selected {
+  @apply border-primary-500 shadow-lg;
+}
+
+.custom-node.agent-only {
+  @apply border-blue-400 bg-blue-50;
+}
+
+.custom-node.customer-only {
+  @apply border-green-400 bg-green-50;
+}
+
+.node-header {
+  @apply flex items-center justify-between mb-2;
+}
+
+.node-title {
+  @apply font-semibold text-secondary-800 text-sm;
+}
+
+.node-type {
+  @apply text-xs px-2 py-1 rounded bg-secondary-100 text-secondary-600;
+}
+
+.node-content {
+  @apply text-sm text-secondary-700;
+}
+
+/* Flow canvas toolbar */
+.flow-toolbar {
+  @apply absolute top-4 left-4 z-10 bg-white rounded-lg shadow-lg border border-secondary-200 p-2;
+}
+
+.flow-toolbar button {
+  @apply p-2 rounded hover:bg-secondary-100 transition-colors;
+}
+
+/* Property panel */
+.property-panel {
+  @apply w-80 bg-white border-l border-secondary-200 h-full overflow-y-auto;
+}
+
+.property-section {
+  @apply p-4 border-b border-secondary-200;
+}
+
+.property-section h3 {
+  @apply font-semibold text-secondary-800 mb-3;
+}
+
+.property-field {
+  @apply mb-4;
+}
+
+.property-field label {
+  @apply block text-sm font-medium text-secondary-700 mb-1;
+}
+
+/* Form elements */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-secondary-700 mb-2;
+}
+
+.form-input {
+  @apply input;
+}
+
+.form-textarea {
+  @apply input resize-y min-h-[80px];
+}
+
+.form-select {
+  @apply input pr-8 bg-no-repeat bg-right bg-[length:16px_16px] cursor-pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.form-checkbox {
+  @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-secondary-300 rounded;
+}
+
+.form-radio {
+  @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-secondary-300;
+}
+
+/* Agent CRM form */
+.crm-form {
+  @apply bg-white rounded-lg shadow-sm border border-secondary-200 p-6 mb-6;
+}
+
+.crm-form-header {
+  @apply flex items-center justify-between mb-4 pb-4 border-b border-secondary-200;
+}
+
+.crm-form-title {
+  @apply text-lg font-semibold text-secondary-800;
+}
+
+.crm-form-required {
+  @apply text-red-600 text-sm;
+}
+
+/* Session history */
+.session-timeline {
+  @apply space-y-4;
+}
+
+.session-step {
+  @apply flex items-start space-x-3 p-3 rounded-lg bg-secondary-50 border border-secondary-200;
+}
+
+.session-step.current {
+  @apply bg-primary-50 border-primary-200;
+}
+
+.session-step-icon {
+  @apply w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium mt-1;
+}
+
+.session-step-content {
+  @apply flex-1 min-w-0;
+}
+
+.session-step-title {
+  @apply font-medium text-secondary-800;
+}
+
+.session-step-time {
+  @apply text-sm text-secondary-500;
+}
+
+/* Analytics charts */
+.analytics-card {
+  @apply card p-6;
+}
+
+.analytics-metric {
+  @apply text-center;
+}
+
+.analytics-metric-value {
+  @apply text-3xl font-bold text-primary-600 mb-1;
+}
+
+.analytics-metric-label {
+  @apply text-sm text-secondary-600;
+}
+
+/* Customer widget specific styles */
+.widget-container {
+  @apply max-w-2xl mx-auto bg-white;
+}
+
+.widget-header {
+  @apply border-b border-secondary-200 p-6;
+}
+
+.widget-content {
+  @apply p-6;
+}
+
+.widget-navigation {
+  @apply flex items-center justify-between p-6 border-t border-secondary-200;
+}
+
+/* Escalation modal */
+.escalation-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.escalation-content {
+  @apply bg-white rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-hidden;
+}
+
+.escalation-header {
+  @apply p-6 border-b border-secondary-200;
+}
+
+.escalation-body {
+  @apply p-6 max-h-96 overflow-y-auto;
+}
+
+.escalation-footer {
+  @apply p-6 border-t border-secondary-200 flex justify-end space-x-3;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .property-panel {
+    @apply fixed inset-y-0 right-0 z-40 transform transition-transform duration-300;
+  }
+  
+  .property-panel.closed {
+    @apply translate-x-full;
+  }
+  
+  .widget-container {
+    @apply m-0 h-screen;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-after: always;
+  }
+}
