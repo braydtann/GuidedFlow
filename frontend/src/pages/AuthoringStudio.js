@@ -15,7 +15,7 @@ import toast from 'react-hot-toast';
 import { 
   PlusIcon, 
   TrashIcon, 
-  SaveIcon,
+  CheckIcon,
   EyeIcon,
   ArrowLeftIcon,
   Cog6ToothIcon
