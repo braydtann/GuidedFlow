@@ -254,7 +254,7 @@ const AuthoringStudio = () => {
             {saving ? (
               <div className="loading-spinner mr-2"></div>
             ) : (
-              <SaveIcon className="w-4 h-4 mr-2" />
+              <CheckIcon className="w-4 h-4 mr-2" />
             )}
             {saving ? 'Saving...' : 'Save'}
           </button>
